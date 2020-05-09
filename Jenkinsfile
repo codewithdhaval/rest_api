@@ -1,5 +1,5 @@
-
 #!groovy
+
 def isPrToDevelop() {
     return (env.BRANCH_NAME =~ '^PR-\\d+' &&  env.CHANGE_TARGET == 'develop')
 }
