@@ -18,15 +18,6 @@
     #      - result.rc == 0
     #      - '"docker" not in result.stdout'
 
-    
+
     - name: building python project
-      command: pipenv update
-
-    - name: creating docker image
-      command: export FLASK_APP=./app.py
-
-    - name: activate rest_api project
-      command: source "$(pipenv --venv)"/bin/activate
-
-    - name: start flask server
-      command: flask run -h 0.0.0.0 --port=8080
+      script: ./bootstrap.sh
