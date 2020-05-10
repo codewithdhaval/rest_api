@@ -18,9 +18,7 @@
     #      - result.rc == 0
     #      - '"docker" not in result.stdout'
 
-    - name: root of the project directory
-      command: cd ~/opt/python/rest_api
-
+    
     - name: building python project
       command: pipenv update
 
