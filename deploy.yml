@@ -9,4 +9,6 @@
         - python-virutalenv
       vars:
         ansible_python_interpreter: /usr/bin/python2.7
-    - pip: requirements=/home/ansadmin/opt/python/rest_api/requirements.txt virtualenv=/home/ansadmin/opt/python/rest_api/.venv    
+    - pip: requirements=/home/ansadmin/opt/python/rest_api/requirements.txt virtualenv=/home/ansadmin/opt/python/rest_api/.venv
+    - name: start Flask
+      shell: /home/ansadmin/opt/python/rest_api/bootstrap.sh
